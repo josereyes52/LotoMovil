@@ -9,32 +9,428 @@ const count = ref(5)
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <div class="container">
+    <div class="elements">
+      <span class="next-Draw"></span>
+      <span class="past-Draw past-Draw1"></span>
+      <span class="past-Draw past-Draw2"></span>
+      <span class="past-Draw past-Draw3"></span>
+      <span class="past-Draw past-Draw4"></span>
+      <div class="royal3">
+        <span class="circle circle-royal1"></span>
+        <span class="circle circle-royal2"></span>
+        <span class="circle circle-royal3"></span>
+        <span class="circle circle-royal4"></span>
+        <span class="circle circle-royal5"></span>
+        <span class="circle circle-royal6"></span>
+        <span class="circle circle-royal7"></span>
+        <span class="circle circle-royal8"></span>
+        <span class="circle circle-royal9"></span>
+        <span class="circle circle-royal10"></span>
+        <span class="circle circle-royal11"></span>
+        <span class="circle circle-royal12"></span>
+      </div>
+      <div class="royal4">
+        <span class="circle circle-royal1"></span>
+        <span class="circle circle-royal2"></span>
+        <span class="circle circle-royal3"></span>
+        <span class="circle circle-royal4"></span>
+        <span class="circle circle-royal5"></span>
+        <span class="circle circle-royal6"></span>
+        <span class="circle circle-royal7"></span>
+        <span class="circle circle-royal8"></span>
+        <span class="circle circle-royal9"></span>
+        <span class="circle circle-royal10"></span>
+        <span class="circle circle-royal11"></span>
+        <span class="circle circle-royal12"></span>
+        <span class="circle circle-royal13"></span>
+        <span class="circle circle-royal14"></span>
+        <span class="circle circle-royal15"></span>
+        <span class="circle circle-royal16"></span>
+      </div>
 
-  <p>
-    Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
-    +
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-  </p>
+      <div class="result">
+        <span class="circle circle-royal1"></span>
+        <span class="circle circle-royal2"></span>
+        <span class="circle circle-royal3"></span>
+        <span class="circle circle-royal4"></span>
+        <span class="circle circle-royal5"></span>
+        <span class="circle circle-royal6"></span>
+        <span class="circle circle-royal7"></span>
+        <span class="circle circle-royal8"></span>
+        <span class="circle circle-royal9"></span>
+        <span class="circle circle-royal10"></span>
+        <span class="circle circle-royal11"></span>
+        <span class="circle circle-royal12"></span>
+      </div>
 
-  <p>
-    <a href="https://vitejs.dev/guide/features.html" target="_blank">
-      Vite Documentation
-    </a>
-    |
-    <a href="https://v3.vuejs.org/" target="_blank">Vue 3 Documentation</a>
-  </p>
+      <div class="cash-three-strainght">
+        <span class="cash-three1"></span>
+        <span class="cash-three2"></span>
+      </div>
+      <div class="cash-four-strainght">
+        <span class="cash-four1"></span>
+        <span class="cash-four2"></span>
+      </div>
 
-  <button type="button" @click="count--">count is: {{ count }}</button>
-  <p>
-    Edit
-    <code>components/HelloWorld.vue</code> to test hot module replacement.
-  </p>
+      <div class="borlette">
+        <span class="first-1"></span>
+        <span class="first-2"></span>
+        <span class="second-1"></span>
+        <span class="second-2"></span>
+        <span class="third-1"></span>
+        <span class="third-2"></span>
+      </div>
+
+      <div class="mariage">
+        <span class="first"></span>
+        <span class="second"></span>
+
+      </div>
+      
+      <img src="../assets/img/IT-lottery.jpeg" alt="Result">
+
+    </div>
+  </div>
 </template>
 
 <style scoped>
-a {
-  color: #42b983;
+.elements {
+  position: relative;
+}
+
+.elements span {
+  background-color: red;
+}
+.next-Draw {
+  width: 7.5%;
+  height: 5%;
+  position: absolute;
+  top: 13.3%;
+  left: 25%;
+}
+.past-Draw {
+  width: 24.7%;
+  height: 6%;
+  left: 4%;
+  position: absolute;
+}
+.past-Draw1 {
+  top: 28.3%;
+}
+.past-Draw2 {
+  top: 37.3%;
+}
+.past-Draw3 {
+  top: 46%;
+}
+.past-Draw4 {
+  top: 54.7%;
+}
+
+.circle {
+  width: 4%;
+  height: 7%;
+  border-radius: 50%;
+  position: absolute;
+  
+}
+
+.royal3 .circle-royal1 {
+  left: 35.34%;
+  top: 28%;
+}
+
+.royal3 .circle-royal2 {
+  left: 40.5%;
+  top: 28%;
+}
+
+.royal3 .circle-royal3 {
+  left: 45.6%;
+  top: 28%;
+}
+
+.royal3 .circle-royal3 {
+  left: 45.6%;
+  top: 28%;
+}
+
+.royal3 .circle-royal4 {
+  left: 35.34%;
+  top: 36.8%;
+}
+
+.royal3 .circle-royal4 {
+  left: 35.34%;
+  top: 36.8%;
+}
+
+.royal3 .circle-royal5 {
+  left: 40.5%;
+  top: 36.8%;
+}
+
+.royal3 .circle-royal6 {
+  left: 45.6%;
+  top: 36.8%;
+}
+
+.royal3 .circle-royal7 {
+  left: 35.4%;
+  top: 45.8%;
+}
+
+.royal3 .circle-royal8 {
+  left: 40.5%;
+  top: 45.8%;
+}
+
+.royal3 .circle-royal9 {
+  left: 45.6%;
+  top: 45.8%;
+}
+
+.royal3 .circle-royal10 {
+  left: 35.4%;
+  top: 54.8%;
+}
+
+.royal3 .circle-royal11 {
+  left: 40.5%;
+  top: 55%;
+}
+
+.royal3 .circle-royal12 {
+  left: 45.6%;
+  top: 55%;
+}
+
+.royal4 .circle-royal1 {
+  left: 54.9%;
+  top: 28%;
+}
+
+.royal4 .circle-royal2 {
+  left: 60%;
+  top: 28%;
+}
+
+.royal4 .circle-royal3 {
+  left: 65.1%;
+  top: 28%;
+}
+
+.royal4 .circle-royal4 {
+  left: 70.2%;
+  top: 28%;
+}
+
+.royal4 .circle-royal5 {
+  left: 54.9%;
+  top: 36.8%;
+}
+
+.royal4 .circle-royal6 {
+  left: 60%;
+  top: 36.8%;
+}
+
+.royal4 .circle-royal7 {
+  left: 65.1%;
+  top: 36.8%;
+}
+
+.royal4 .circle-royal8 {
+  left: 70.2%;
+  top: 36.8%;
+}
+
+.royal4 .circle-royal9 {
+  left: 54.9%;
+  top: 45.8%;
+}
+
+.royal4 .circle-royal10 {
+  left: 60%;
+  top: 45.8%;
+}
+
+.royal4 .circle-royal11 {
+  left: 65.1%;
+  top: 45.8%;
+}
+
+.royal4 .circle-royal12 {
+  left: 70.2%;
+  top: 45.8%;
+}
+
+.royal4 .circle-royal13 {
+  left: 54.9%;
+  top: 54.8%;
+}
+
+.royal4 .circle-royal14 {
+  left: 60%;
+  top: 54.8%;
+}
+
+.royal4 .circle-royal15 {
+  left: 65.1%;
+  top: 54.8%;
+}
+
+.royal4 .circle-royal16 {
+  left: 70.2%;
+  top: 54.8%;
+}
+
+.result .circle-royal1 {
+  left: 79.5%;
+  top: 28%;
+}
+
+.result .circle-royal2 {
+  left: 84.65%;
+  top: 28%;
+}
+
+.result .circle-royal3 {
+  left: 89.76%;
+  top: 28%;
+}
+
+.result .circle-royal4 {
+  left: 79.5%;
+  top: 36.8%;
+}
+
+.result .circle-royal5 {
+  left: 84.65%;
+  top: 36.8%;
+}
+
+.result .circle-royal6 {
+  left: 89.76%;
+  top: 36.8%;
+}
+
+.result .circle-royal7 {
+  left: 79.5%;
+  top: 45.8%;
+}
+
+.result .circle-royal8 {
+  left: 84.65%;
+  top: 45.8%;
+}
+
+.result .circle-royal9 {
+  left: 89.76%;
+  top: 45.8%;
+}
+
+.result .circle-royal10 {
+  left: 79.5%;
+  top: 54.8%;
+}
+
+.result .circle-royal11 {
+  left: 84.65%;
+  top: 55%;
+}
+
+.result .circle-royal12 {
+  left: 89.76%;
+  top: 55%;
+}
+
+.cash-three-strainght span,
+.cash-four-strainght span,
+.borlette span,
+.mariage span {
+  background-color: red;
+  position: absolute;
+}
+
+.borlette span,
+.mariage span {
+  width: 6%;
+    height: 6%;
+}
+
+.borlette .first-1 {
+  top: 75%;
+  left: 34%;
+}
+
+.borlette .first-2 {
+  top: 75%;
+  left: 43%;
+}
+
+.borlette .second-1 {
+  top: 82.6%;
+  left: 34%;
+}
+
+.borlette .second-2 {
+  top: 82.6%;
+  left: 43%;
+}
+
+.borlette .third-1 {
+  top: 90.5%;
+  left: 34%;
+}
+
+.borlette .third-2 {
+  top: 90.5%;
+  left: 43%;
+}
+
+.mariage .first {
+  top: 75%;
+  left: 52.8%;
+}
+
+.mariage .second {
+  top: 75%;
+  left: 61.2%;
+}
+
+
+
+.cash-three1 {
+  left: 3.6%;
+  top: 75%;
+  width: 10%;
+  height: 6%;
+}
+.cash-three2 {
+  left: 18.6%;
+  top: 75%;
+  height: 6%;
+  width: 5.6%;
+}
+
+.cash-four1 {
+  left: 3.6%;
+  top: 90.3%;
+  width: 10%;
+  height: 6%;
+}
+
+.cash-four2 {
+  left: 18.6%;
+  top: 90.3%;
+  height: 6%;
+  width: 5.6%;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 </style>
