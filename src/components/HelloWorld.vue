@@ -1,15 +1,6 @@
-<script setup>
-import { ref } from 'vue'
-
-defineProps({
-  msg: String
-})
-
-const count = ref(5)
-</script>
-
 <template>
   <div class="container">
+    <h1>{{msg}}</h1>
     <div class="elements">
       <span class="next-Draw"></span>
       <span class="past-Draw past-Draw1"></span>
@@ -94,14 +85,153 @@ const count = ref(5)
   </div>
 </template>
 
+<script>
+import { ref } from 'vue'
+
+export default {
+  data () {
+    return {
+      fast3: "",
+      fast4: "",
+    }
+  },
+  methods: {
+    getResult() {
+      this.getFast3()
+      this.getFast4()
+    },
+    getFast3() {
+      fetch('https://esilotto.com.ht/Loto/Consultas.php?Tipo=C3&Fecha_inicial=2022-6-4&Fecha_hasta=2022-6-4&Sorteo=0')
+        .then(res => res.json())
+        .then(res => {
+          const fast3 = res.Detalle
+          for (let i = 1; i <= 4; i++) {
+            // add to this class past-Draw1 the fecha
+            const pastDraw = document.querySelector(`.past-Draw${i}`)
+            pastDraw.innerHTML = `${fast3[i].Sorteo} | ${fast3[i].Hora}`
+
+            // switch case
+            switch (i) {
+              case 1:
+                const royal1 = document.querySelector(`.circle-royal1`)
+                royal1.innerHTML = `${fast3[i].Num1}`
+                const royal2 = document.querySelector(`.circle-royal2`)
+                royal2.innerHTML = `${fast3[i].Num2}`
+                const royal3 = document.querySelector(`.circle-royal3`)
+                royal3.innerHTML = `${fast3[i].Num3}`
+                break;
+              case 2:
+                const royal4 = document.querySelector(`.circle-royal4`)
+                royal4.innerHTML = `${fast3[i].Num1}`
+                const royal5 = document.querySelector(`.circle-royal5`)
+                royal5.innerHTML = `${fast3[i].Num2}`
+                const royal6 = document.querySelector(`.circle-royal6`)
+                royal6.innerHTML = `${fast3[i].Num3}`
+                break;
+              case 3:
+                const royal7 = document.querySelector(`.circle-royal7`)
+                royal7.innerHTML = `${fast3[i].Num1}`
+                const royal8 = document.querySelector(`.circle-royal8`)
+                royal8.innerHTML = `${fast3[i].Num2}`
+                const royal9 = document.querySelector(`.circle-royal9`)
+                royal9.innerHTML = `${fast3[i].Num3}`
+                break;
+              case 4:
+                const royal10 = document.querySelector(`.circle-royal10`)
+                royal10.innerHTML = `${fast3[i].Num1}`
+                const royal11 = document.querySelector(`.circle-royal11`)
+                royal11.innerHTML = `${fast3[i].Num2}`
+                const royal12 = document.querySelector(`.circle-royal12`)
+                royal12.innerHTML = `${fast3[i].Num3}`
+            }
+          }
+        })
+        .catch(err => console.log(err))
+    },
+    getFast4() {
+      fetch('https://esilotto.com.ht/Loto/Consultas.php?Tipo=P4&Fecha_inicial=2022-6-4&Fecha_hasta=2022-6-4&Sorteo=0')
+        .then(res => res.json())
+        .then(res => {
+          const fast4 = res.Detalle
+          for (let i = 1; i <= 4; i++) {
+            // add to this class past-Draw1 the fecha
+            const pastDraw = document.querySelector(`.past-Draw${i}`)
+            pastDraw.innerHTML = `${fast4[i].Sorteo} | ${fast4[i].Hora}`
+
+            // switch case
+            switch (i) {
+              case 1:
+                const royal1 = document.querySelector(`.royal4 .circle-royal1`)
+                royal1.innerHTML = `${fast4[i].Num1}`
+                const royal2 = document.querySelector(`.royal4 .circle-royal2`)
+                royal2.innerHTML = `${fast4[i].Num2}`
+                const royal3 = document.querySelector(`.royal4 .circle-royal3`)
+                royal3.innerHTML = `${fast4[i].Num3}`
+                const royal4 = document.querySelector(`.royal4 .circle-royal4`)
+                royal4.innerHTML = `${fast4[i].Num4}`
+                break;
+              case 2:
+                const royal5 = document.querySelector(`.royal4 .circle-royal5`)
+                royal5.innerHTML = `${fast4[i].Num1}`
+                const royal6 = document.querySelector(`.royal4 .circle-royal6`)
+                royal6.innerHTML = `${fast4[i].Num2}`
+                const royal7 = document.querySelector(`.royal4 .circle-royal7`)
+                royal7.innerHTML = `${fast4[i].Num3}`
+                const royal8 = document.querySelector(`.royal4 .circle-royal8`)
+                royal8.innerHTML = `${fast4[i].Num4}`
+                break;
+              case 3:
+                const royal9 = document.querySelector(`.royal4 .circle-royal9`)
+                royal9.innerHTML = `${fast4[i].Num1}`
+                const royal10 = document.querySelector(`.royal4 .circle-royal10`)
+                royal10.innerHTML = `${fast4[i].Num2}`
+                const royal11 = document.querySelector(`.royal4 .circle-royal11`)
+                royal11.innerHTML = `${fast4[i].Num3}`
+                const royal12 = document.querySelector(`.royal4 .circle-royal12`)
+                royal12.innerHTML = `${fast4[i].Num4}`
+                break;
+              case 4:
+                const royal13 = document.querySelector(`.royal4 .circle-royal13`)
+                royal13.innerHTML = `${fast4[i].Num1}`
+                const royal14 = document.querySelector(`.royal4 .circle-royal14`)
+                royal14.innerHTML = `${fast4[i].Num2}`
+                const royal15 = document.querySelector(`.royal4 .circle-royal15`)
+                royal15.innerHTML = `${fast4[i].Num3}`
+                const royal16 = document.querySelector(`.royal4 .circle-royal16`)
+                royal16.innerHTML = `${fast4[i].Num4}`
+            }
+          }
+        })
+        .catch(err => console.log(err))
+    }
+  },
+  beforeMount(){
+    this.getResult()
+    console.log(this.fast3)
+ }
+}
+</script>
+
 <style scoped>
 .elements {
   position: relative;
 }
 
-.elements span {
-  background-color: red;
+.elements img {
+  pointer-events: none;
 }
+
+.elements span {
+  /* background-color: red; */
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 49px;
+}
+
+span.past-Draw {
+    color: white;
+}
+
 .next-Draw {
   width: 7.5%;
   height: 5%;
